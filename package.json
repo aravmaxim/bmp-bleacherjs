@@ -4,7 +4,7 @@
   "description": "Bmp cleaner and true file type checker.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --testMatch=**/test/*.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/aravmaxim/bmp-bleacherjs#readme",
   "devDependencies": {
-    "jest": "^27.0.6"
+    "mocha": "^9.0.1"
   }
 }
