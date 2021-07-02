@@ -1,0 +1,25 @@
+{
+  "name": "bmp-bleacherjs",
+  "version": "1.0.0",
+  "description": "Bmp cleaner and true file type checker.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --testMatch=**/test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aravmaxim/bmp-bleacherjs.git"
+  },
+  "keywords": [
+    "cdr"
+  ],
+  "author": "Maxim Arav <aravmaxim@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aravmaxim/bmp-bleacherjs/issues"
+  },
+  "homepage": "https://github.com/aravmaxim/bmp-bleacherjs#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}
