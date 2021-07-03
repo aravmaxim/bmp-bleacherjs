@@ -16,6 +16,30 @@ describe('simple file tests', function(){
   });
 });
 
+describe('test options', function(){
+  describe('throw_exception option', function(){
+    it('dont throw exception when throw_exception is false', function(){
+      var bmpObj = bmp({throw_exception : false});
+      var bmpData = get_pic('bmp_with_bad_magic.bmp');
+      var result = bmpObj.check(bmpData);
+      assert.equal(result, false);
+      assert.equal(bmpObj.geterror(), 'Didnt found magic number got: PE');
+    });
+    it('throw exception when throw_exception is true', function(){
+      var bmpObj = bmp({throw_exception : true});
+      var bmpData = get_pic('bmp_with_bad_magic.bmp');
+      assert.throws(() => {bmpObj.check(bmpData)}, Error, 'Didnt found magic number got: PE');
+    });
+    it('default value for throw_exception is false', function(){
+      var bmpObj = bmp();
+      var bmpData = get_pic('bmp_with_bad_magic.bmp');
+      var result = bmpObj.check(bmpData);
+      assert.equal(result, false);
+      assert.equal(bmpObj.geterror(), 'Didnt found magic number got: PE');
+    });
+  })
+});
+
 describe('header tests', function(){
   it('bmp with bad magic number', function(){
     var bmpObj = bmp();
