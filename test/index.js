@@ -14,6 +14,34 @@ describe('simple file tests', function(){
     var result = bmpObj.check(bmpData);
     assert.ok(result, 'The bmp is ok');
   });
+
+  it('mspaint 16 color', function(){
+    var bmpObj = bmp();
+    var bmpData = get_pic('mspaint_16_color.bmp');
+    var result = bmpObj.check(bmpData);
+    assert.ok(result, 'The bmp is ok');
+  });
+
+  it('mspaint 24 bit', function(){
+    var bmpObj = bmp();
+    var bmpData = get_pic('mspaint_24_bit.bmp');
+    var result = bmpObj.check(bmpData);
+    assert.ok(result, 'The bmp is ok');
+  });
+
+  it('mspaint 256 color', function(){
+    var bmpObj = bmp();
+    var bmpData = get_pic('mspaint_256_color.bmp');
+    var result = bmpObj.check(bmpData);
+    assert.ok(result, 'The bmp is ok');
+  });
+
+  it('mspaint monochrome', function(){
+    var bmpObj = bmp();
+    var bmpData = get_pic('mspaint_monochrome.bmp');
+    var result = bmpObj.check(bmpData);
+    assert.ok(result, 'The bmp is ok');
+  });
 });
 
 describe('test options', function(){
