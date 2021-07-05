@@ -12,35 +12,55 @@ describe('simple file tests', function(){
     var bmpObj = bmp();
     var bmpData = get_pic('simple_bmp.bmp');
     var result = bmpObj.check(bmpData);
-    assert.ok(result, 'The bmp is ok');
+    if(result)
+      assert.ok(result, 'The bmp is ok');
+    else {
+      assert.fail(bmpObj.geterror());
+    }
   });
 
   it('mspaint 16 color', function(){
     var bmpObj = bmp();
     var bmpData = get_pic('mspaint_16_color.bmp');
     var result = bmpObj.check(bmpData);
+    if(result)
     assert.ok(result, 'The bmp is ok');
+    else {
+      assert.fail(bmpObj.geterror());
+    }
   });
 
   it('mspaint 24 bit', function(){
     var bmpObj = bmp();
     var bmpData = get_pic('mspaint_24_bit.bmp');
     var result = bmpObj.check(bmpData);
+    if(result)
     assert.ok(result, 'The bmp is ok');
+    else {
+      assert.fail(bmpObj.geterror());
+    }
   });
 
   it('mspaint 256 color', function(){
     var bmpObj = bmp();
     var bmpData = get_pic('mspaint_256_color.bmp');
     var result = bmpObj.check(bmpData);
+    if(result)
     assert.ok(result, 'The bmp is ok');
+    else {
+      assert.fail(bmpObj.geterror());
+    }
   });
 
   it('mspaint monochrome', function(){
     var bmpObj = bmp();
     var bmpData = get_pic('mspaint_monochrome.bmp');
     var result = bmpObj.check(bmpData);
+    if(result)
     assert.ok(result, 'The bmp is ok');
+    else {
+      assert.fail(bmpObj.geterror());
+    }
   });
 });
 
