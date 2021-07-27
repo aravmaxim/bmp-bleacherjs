@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Bmp cleaner and true file type checker.",
   "main": "index.js",
+  "exports" : "./index.js",
   "scripts": {
     "test": "mocha"
   },
